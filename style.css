@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serife;
+}
+/* Warna warna yang tersedia pada web */
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+/* Mengatur ukuran text */
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+     background: var(--bg-color);
+     color: var(--text-color);
+}
+/* Untuk mengelompokkan content */
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+/* Mengatur header */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+/* Mengatur text logo pada navbar */
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+/* Mengatur ukuran dan warna text pada navbar   */
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color:var(--main-color)
+}
+
+/* Home */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Mengatur ukuran gambar pd tampilan home */
+.home-img img{
+    width: 32vw;
+    border-radius: 250px;
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+/* Mengganti warna pada text logo di navbar */
+span{
+    color: var(--main-color);
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-content{
+    font-size: 1.6rem;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+/* About */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background: var(--second-bg-color);
+}
+/* Mengukur ukuran gambar pada tampilan about */
+.about-img img{
+    width: 30vw;
+}
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+   text-align: left; 
+   line-height: 1.2;
+}
+
+.about-content p{
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem;
+}
+
+/* Skill */
+.skill h2{
+    margin-bottom: 5rem;
+}
+/* Menambahkan container */
+.skill-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-container .skill-box{
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4 rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+/* Hover  */
+.skill-container .skill-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+/* Mengatur ukuran icon */
+.skill-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+    padding-top: 10px;
+}
+/* Mengatur ukuran font h3 */
+.skill-box h3{
+    font-size: 2.6rem;  
+}
+/* Mengatur ukuran font p */
+.skill-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+/* Project */
+.project{
+    background: var(--second-bg-color);
+}
+/* Mengatur jarak */
+.project h2{
+    margin-bottom: 4rem;
+}
+
+.project-container{
+    display: flex;
+    grid-template-columns: repeat(3, lfr);
+    align-items: center;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.project-container .project-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+/* Mengatur ukuran img pada box */
+.project-box img{
+    width: 350px;
+    transition: .5s ease;
+}
+
+.project-box:hover img{
+    transform: scale(1.1);
+}
+
+/* Menambahkan layers pada box project */
+.project-box .project-layers{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.project-box:hover .project-layers{
+    transform: translateY(0);
+}
+/* Mengatur ukuran font pada layers */
+.project-layers h4{
+    font-size: 3rem;
+}
+
+.project-layers a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+/* Contact */
+
+#contact .heading {
+    margin-bottom: 3rem;
+    text-align: left;
+    padding-top: 100px;
+}
+/* Mengatur ukuran font pada bagian contact */
+#contact p{
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem;
+}
+
+/* Mengatur ukuran pada bagian icon social media */
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0; 
+    transition: .5s ease;
+}
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+}
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem 9%;
+    background: var(--bg-color);
+}
+/* Mengatur ukuran font pada footer */
+.footer-text p{
+    font-size: 1.5rem;
+}
+/* Mengatur icon pada footer untuk dapat kembali ke halaman home */
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+ 
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
